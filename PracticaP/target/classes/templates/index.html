@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <html>
+        <head>
+            <title>Practica</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body>
+            <h1>Listado de estados</h1>
+            <a th:href="@{/estado/nuevo}"> Nuevo Estado </a>
+
+            <p th:text="${variable}"></p>
+            <p>[[${variable}]]</p>
+
+            <div th:if="${estados != null and !estados.empty}">
+                <table border="0">
+                    <thead>
+                        <tr>
+                            <th>Nombre del estado</th>
+                            <th>Capital del estado</th>
+                            <th>Poblacion del estado</th>
+                            <th>Costas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="estado: ${estados}">
+                            <td>[[${estado.nombre_estado}]]</td>
+                            <td>[[${estado.capital_estado}]]</td>
+                            <td>[[${estado.poblacion_estado}]]</td>
+                            <td>[[${estado.costa_estado}]]</td>
+                            <td>
+                                <a th:href="@{/estado/eliminar/} + ${estado.idEstado}">Eliminar</a> 
+                                <a th:href="@{/estado/modificar/} + ${estado.idEstado}">Modificar</a>  
+
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div th:if="${estados == null or estados.empty}">
+                <h2>No hay estados que mostrar </h2>
+
+            </div>
+
+
+
+
+
+
+            <br>
+            <br>
+            <br>
+        </body>
+    </html>
