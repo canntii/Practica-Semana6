@@ -9,16 +9,18 @@
             <link href="../static/css/estilo1.css" rel="stylesheet" type="text/css"/>
         </head>
         <body>
-            <h1>Explora el mundo: Descubre los países del planeta</h1>
+
+            <div class="tituloTabla">
+                <h2>Lista de Paises</h2>
+            </div>
             
-            <h2>Lista de Paises</h2>
             <a th:href="@{/estado/nuevo}"> Nuevo Estado </a>
 
             <p th:text="${variable}"></p>
             <p>[[${variable}]]</p>
 
             <div th:if="${estados != null and !estados.empty}">
-                <table border="0">
+                <table border="1" class="tableF">
                     <thead>
                         <tr>
                             <th>Nombre del estado</th>

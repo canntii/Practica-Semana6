@@ -1,0 +1,6 @@
+com\practica\practicaP\controller\estadoController.class
+com\practica\practicaP\service\EstadoService.class
+com\practica\practicaP\domain\Estado.class
+com\practica\practicaP\dao\EstadoDao.class
+com\practica\practicaP\PracticaPApplication.class
+com\practica\practicaP\service\impl\EstadoServiceImpl.class
