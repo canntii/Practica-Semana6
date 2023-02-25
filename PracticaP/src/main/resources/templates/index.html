@@ -6,7 +6,7 @@
             <title>Practica</title>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link href="..\PracticaP\src\main\resources\static\css\estilo.css" rel="stylesheet" type="text/css"/>
+            <link href="..\static\css\estilo.css" rel="stylesheet" type="text/css"/>
         </head>
         <body>
 
@@ -14,7 +14,7 @@
                 <h2>Lista de Paises</h2>
             </div>
             
-            <a th:href="@{/estado/nuevo}"> Nuevo Estado </a>
+            <a class="btn btnForm btnPrimary" th:href="@{/estado/nuevo}"> Agregar Pais </a>
 
             <p th:text="${variable}"></p>
             <p>[[${variable}]]</p>
@@ -37,9 +37,9 @@
                             <td class="textLeft">[[${estado.poblacion_estado}]]</td>
                             <td class="textLeft">[[${estado.costa_estado}]]</td>
                             <td class="textLeft">
-                                <ul>
-                                    <li><a th:href="@{/estado/eliminar/} + ${estado.idEstado}">Eliminar</a></li>
-                                    <li><a th:href="@{/estado/modificar/} + ${estado.idEstado}">Modificar</a></li>
+                                <ul class="options">
+                                    <li class="option"><a class="btn btnForm btnPrimary" th:href="@{/estado/eliminar/} + ${estado.idEstado}">Eliminar</a></li>
+                                    <li class="option"><a class="btn btnForm btnPrimary" th:href="@{/estado/modificar/} + ${estado.idEstado}">Modificar</a></li>
                                 </ul>
                             </td>
 

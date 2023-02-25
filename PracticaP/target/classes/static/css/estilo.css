@@ -28,7 +28,7 @@ table{
     font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
-    
+
 }
 
 .tableF{
@@ -42,7 +42,7 @@ table{
     width: 100%;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     animation: float 5s infinite;
-    
+
 }
 
 th{
@@ -75,8 +75,61 @@ tr{
     text-shadow: 0 1px 1px rgba(0,0,0,0.1)
 }
 
-.option{
+.options{
     display: flex;
     margin-right: 90%;
+    list-style: none;
+
 }
 
+.option{
+    margin: 0 10px;
+    line-height: 90px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.btnForm {
+  letter-spacing: 2px;
+  border-width: 2px;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 3px 40px;
+  margin-bottom: 0px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+  border-width: 2px;
+}
+.btn:visited {
+  display: inline-block;
+  padding: 10px 16px;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+  border-width: 2px;
+  color: white;
+}
+
+.btnPrimary {
+  background-color: #1b1e24;
+  color: white;
+}
+
+.btnPrimary:hover {
+  background-color: #c1c3d1;
+  color: #1b1e24;
+}
