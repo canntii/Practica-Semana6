@@ -6,20 +6,25 @@
             <title>Practica</title>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
             <link href="css\estilo.css" rel="stylesheet" type="text/css"/>
+=======
+            <link href="/css/estilo.css" rel="stylesheet" type="text/css"/>
+>>>>>>> Stashed changes
         </head>
         <body>
+            <header th:replace="layout/plantilla :: header"/>
 
             <div class="tituloTabla">
                 <h2>Lista de Paises</h2>
             </div>
-            
-            <a class="btn btnForm btnPrimary" th:href="@{/estado/nuevo}"> Agregar Pais </a>
+
+
 
             <p th:text="${variable}"></p>
             <p>[[${variable}]]</p>
 
-            <div th:if="${estados != null and !estados.empty}">
+            <div class="centrarForm" th:if="${estados != null and !estados.empty}">
                 <table  class="tableF">
                     <thead>
                         <tr>
@@ -29,6 +34,7 @@
                             <th class="izquierda">Costas</th>
                             <th/>
                         </tr>
+
                     </thead>
                     <tbody class="table-hover">
                         <tr th:each="estado: ${estados}">
@@ -48,18 +54,14 @@
                 </table>
 
             </div>
-            <div th:if="${estados == null or estados.empty}">
-                <h2>No hay estados que mostrar </h2>
-
+            <div class="centrarBtnAgregar">
+                <a class="btn btnForm btnPrimary btnAddp" th:href="@{/estado/nuevo}"> Agregar Pais </a>
             </div>
 
-
-
-
-
-
-            <br>
-            <br>
-            <br>
+            <div th:if="${estados == null or estados.empty}">
+                <h2>No hay estados que mostrar </h2>
+            </div>
+            
+            <footer th:replace="layout/plantilla :: footer"/>
         </body>
     </html>

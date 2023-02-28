@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <html>
+        <head>
+            <title>plantilla</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href= "/css/estilo.css" rel="stylesheet" type="text/css"/>
+        </head>
+        <body>
+            <header th:fragment = "header">
+                <h1>Explora el Mundo</h1>
+                <br>
+                <hr>
+            </header>
+            
+            <footer th:fragment = "footer">
+                <div class="contenedor">
+                    <div class="barra">
+                        <p>&COPY;Derechos del Grupo 3, 2023</p>
+                    </div>
+                </div>
+            </footer>
+        </body>
+    </html>

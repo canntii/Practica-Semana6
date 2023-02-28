@@ -24,7 +24,8 @@ table{
 }
 
 .tituloTabla h2{
-    color: #fafafa;
+    text-align: center;
+    color: black;
     font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
@@ -89,47 +90,145 @@ tr{
     letter-spacing: 1px;
 }
 .btnForm {
-  letter-spacing: 2px;
-  border-width: 2px;
+    letter-spacing: 2px;
+    border-width: 2px;
 }
 
 
 .btn {
-  display: inline-block;
-  padding: 3px 40px;
-  margin-bottom: 0px;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  border: 1px solid transparent;
-  text-decoration: none;
-  border-width: 2px;
+    display: inline-block;
+    padding: 3px 40px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    text-decoration: none;
+    border-width: 2px;
 }
 .btn:visited {
-  display: inline-block;
-  padding: 10px 16px;
-  margin-bottom: 0;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  border: 1px solid transparent;
-  text-decoration: none;
-  border-width: 2px;
-  color: white;
+    display: inline-block;
+    padding: 10px 16px;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    text-decoration: none;
+    border-width: 2px;
+    color: white;
 }
 
 .btnPrimary {
-  background-color: #1b1e24;
-  color: white;
+    background-color: #1b1e24;
+    color: white;
 }
 
 .btnPrimary:hover {
-  background-color: #c1c3d1;
-  color: #1b1e24;
+    background-color: #c1c3d1;
+    color: #1b1e24;
 }
+
+.btnAddp{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 600px;
+
+
+}
+
+.btnBack{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.centrarBtnAgregar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contenedorFormulario{
+    padding-top: 10px;
+    position: relative;
+    width: 360px;
+    height: 380px;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 0 3px black;
+
+}
+
+.contenedorFormulario form{
+    width: 300px;
+    margin-left: 20px;
+}
+
+.contenedorFormulario form label{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.contenedorFormulario form input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.contenedorFormulario form input[type="button"] {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    color: white;
+    background-color: #d73829;
+    font-size: 18px;
+
+}
+
+footer{
+    background-color: #1b1e24;
+    margin-top: 40px;
+    padding-bottom: 30px;
+
+}
+
+.contenedor {
+    top: 400px;
+    width: min(100%, 120rem);
+    margin: 0 auto;
+}
+
+.barra {
+    padding-top: 2rem;
+    background-color:#1b1e24;
+}
+
+.barra p{
+    background-color: #1b1e24;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;}
+    }
+
+

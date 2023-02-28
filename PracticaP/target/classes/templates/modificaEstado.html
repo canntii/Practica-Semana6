@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
     <html>
         <head>
             <title>Practica</title>
+<<<<<<< Updated upstream
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+=======
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link href="/css/estilo.css" rel="stylesheet" type="text/css"/>
+
+>>>>>>> Stashed changes
         </head>
         <body>
-            <h1>Datos de estado</h1>
-            <a th:href="@{/}"> Regresar </a>
-            <hr>
-            <form th:action="@{/estado/guardar}" method="post" th:object="${estado}">
-                <input type="hidden" name="idEstado" th:field="*{idEstado}">
-                <label>Nombre Estado </label>
-                <input type="text" name="nombre_estado" th:field="*{nombre_estado}" required="true"/>
+            <header th:replace="layout/plantilla :: header"/>
 
-                <label>Capital Estado</label>
-                <input type="text" name="capital_estado" th:field="*{capital_estado}" required="true"/>
-                <br>
+            <div class="tituloTabla">
+                <h2>Datos del Pais</h2>
+            </div>
 
-                <label>Poblacion Estado</label>
-                <input type="text" name="poblacion_estado" th:field="*{poblacion_estado}" required="true"/>
-                <br>
+            <div class="contenedorFormulario">
+                <form th:action="@{/estado/guardar}" method="post" th:object="${estado}">
+                    <input type="hidden" name="idEstado" th:field="*{idEstado}" />
+                    <label>Nombre Estado</label>
+                    <input
+                        type="text"
+                        name="nombre_estado"
+                        th:field="*{nombre_estado}"
+                        required="true"
+                        />
 
-                <label>Costa Estado</label>
-                <input type="long" name="costa_estado" th:field="*{costa_estado}"/>
-                <br>
-                <hr>
-                <input type="submit" value="Enviar" />
-            </form>
+                    <label>Capital Estado</label>
+                    <input
+                        type="text"
+                        name="capital_estado"
+                        th:field="*{capital_estado}"
+                        required="true"
+                        />
 
+                    <label>Poblacion Estado</label>
+                    <input
+                        type="text"
+                        name="poblacion_estado"
+                        th:field="*{poblacion_estado}"
+                        required="true"
+                        />
 
+                    <label>Costa Estado</label>
+                    <input type="long" name="costa_estado" th:field="*{costa_estado}" />
+                    <input type="submit" value="Enviar" class="btnPrimary" />
+                </form>
+            </div>
+            <div class="centrarBtnAgregar">
+                <a class="btn btnPrimary btnForm btnBack" th:href="@{/}"> Regresar </a>
+            </div>
+                        <footer th:replace="layout/plantilla :: footer"/>
         </body>
     </html>
+</html>
