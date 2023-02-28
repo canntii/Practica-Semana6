@@ -15,6 +15,7 @@ public class Estado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idEstado;
+    
     private String nombre_estado;
     private String capital_estado;
     private String poblacion_estado;
