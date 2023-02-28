@@ -1,67 +1,66 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-    <html>
-        <head>
-            <title>Practica</title>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< Updated upstream
-            <link href="css\estilo.css" rel="stylesheet" type="text/css"/>
-=======
-            <link href="/css/estilo.css" rel="stylesheet" type="text/css"/>
->>>>>>> Stashed changes
-        </head>
-        <body>
-            <header th:replace="layout/plantilla :: header"/>
+    <head>
+        <title>Practica</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css\estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
 
-            <div class="tituloTabla">
-                <h2>Lista de Paises</h2>
-            </div>
+    <body>
+        <header th:replace="layout/plantilla :: header"/>
+
+        <div class="tituloTabla">
+            <h2>Lista de Paises</h2>
+        </div>
 
 
 
-            <p th:text="${variable}"></p>
-            <p>[[${variable}]]</p>
+        <p th:text="${variable}"></p>
+        <p>[[${variable}]]</p>
 
-            <div class="centrarForm" th:if="${estados != null and !estados.empty}">
-                <table  class="tableF">
-                    <thead>
-                        <tr>
-                            <th class="izquierda">Pais</th>
-                            <th class="izquierda">Capital</th>
-                            <th class="izquierda">Habitantes</th>
-                            <th class="izquierda">Costas</th>
-                            <th/>
-                        </tr>
+        <div class="centrarForm" th:if="${estados != null and !estados.empty}">
+            <table  class="tableF">
+                <thead>
+                    <tr>
+                        <th class="izquierda">Pais</th>
+                        <th class="izquierda">Capital</th>
+                        <th class="izquierda">Habitantes</th>
+                        <th class="izquierda">Costas</th>
+                        <th/>
+                    </tr>
 
-                    </thead>
-                    <tbody class="table-hover">
-                        <tr th:each="estado: ${estados}">
-                            <td class="textLeft">[[${estado.nombre_estado}]]</td>
-                            <td class="textLeft">[[${estado.capital_estado}]]</td>
-                            <td class="textLeft">[[${estado.poblacion_estado}]]</td>
-                            <td class="textLeft">[[${estado.costa_estado}]]</td>
-                            <td class="textLeft">
-                                <ul class="options">
-                                    <li class="option"><a class="btn btnForm btnPrimary" th:href="@{/estado/eliminar/} + ${estado.idEstado}">Eliminar</a></li>
-                                    <li class="option"><a class="btn btnForm btnPrimary" th:href="@{/estado/modificar/} + ${estado.idEstado}">Modificar</a></li>
-                                </ul>
-                            </td>
+                </thead>
+                <tbody class="table-hover">
+                    <tr th:each="estado: ${estados}">
+                        <td class="textLeft">[[${estado.nombre_estado}]]</td>
+                        <td class="textLeft">[[${estado.capital_estado}]]</td>
+                        <td class="textLeft">[[${estado.poblacion_estado}]]</td>
+                        <td class="textLeft">[[${estado.costa_estado}]]</td>
+                        <td class="textLeft">
+                            <ul class="options">
+                                <li class="option"><a class="btn btnForm btnPrimary" th:href="@{/estado/eliminar/} + ${estado.idEstado}">Eliminar</a></li>
+                                <li class="option"><a class="btn btnForm btnPrimary" th:href="@{/estado/modificar/} + ${estado.idEstado}">Modificar</a></li>
+                            </ul>
+                        </td>
 
-                        </tr>
-                    </tbody>
-                </table>
+                    </tr>
+                </tbody>
+            </table>
 
-            </div>
-            <div class="centrarBtnAgregar">
-                <a class="btn btnForm btnPrimary btnAddp" th:href="@{/estado/nuevo}"> Agregar Pais </a>
-            </div>
+        </div>
+        <div class="centrarBtnAgregar">
+            <a class="btn btnForm btnPrimary btnAddp" th:href="@{/estado/nuevo}"> Agregar Pais </a>
+        </div>
 
-            <div th:if="${estados == null or estados.empty}">
-                <h2>No hay estados que mostrar </h2>
-            </div>
-            
-            <footer th:replace="layout/plantilla :: footer"/>
-        </body>
-    </html>
+        <div th:if="${estados == null or estados.empty}">
+            <h2>No hay estados que mostrar </h2>
+        </div>
+
+        <footer th:replace="layout/plantilla :: footer"></footer>  
+
+</html>
+
+
+
